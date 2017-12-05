@@ -34,6 +34,6 @@ int main(int argc, char* argv[]) {
 
   // print RMSE value
   cout << "Calculated RMSE value is " << err << endl;
-
+  // exit code
   return 0;
 }
