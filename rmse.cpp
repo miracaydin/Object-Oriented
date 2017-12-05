@@ -12,13 +12,9 @@ float f_rmse(float *x, float *y, int N) {
 }
 
 int main(int argc, char* argv[]) {
-  // get command line arguments
-  if (argc < 2) { 
-    cout << "Usage: " << argv[0] << " [SIZE]" << endl;
-    return 1;
-  }
-  int SIZE = atoi(argv[1]);
-  cout << "Size of problem is " << SIZE << endl;
+  // get size of the problem
+  int SIZE = 0;
+  cin >> SIZE;
 
   // create vectors
   float *x = new float[SIZE];
@@ -26,9 +22,11 @@ int main(int argc, char* argv[]) {
   
   // init x and y
   for (int i = 0; i < SIZE; i++) {
-    x[i] = (float)i;
-    y[i] = x[i]*0.999;
+    cin >> x[i];
   }
+  for (int i = 0; i < SIZE; i++) {
+    cin >> y[i];
+  } 
  
   // calculate RMSE
   float err = 0.0;
